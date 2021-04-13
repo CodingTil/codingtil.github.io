@@ -17,7 +17,7 @@ Als erstes habe ich eine Kopie von Flappy Bird mit der [Lightweight Java Game Li
 
 Danach stieß ich jedoch auf Schwierigkeiten, als ich versuchte, die KI zu implementieren. Ich habe ein paar Ansätze ausprobiert (Reinforcement Learning, Supervised Learning), aber - selbst wenn ich sie richtig implementiert habe - war überhaupt kein Trainingsfortschritt sichtbar. Also habe ich das Projekt fallen gelassen und bin weitergezogen.
 
-Ein paar Monate später fand ich jedoch [diese Website](https://xviniette.github.io/FlappyLearning/). Nachdem ich das Repository überflogen hatte, hörte ich zum ersten Mal von Neuroevolution. Nachdem ich das Thema ein wenig recherchiert hatte, fühlte ich mich zuversichtlich, meinen eigenen NEAT-Algorithmus mithilfe von [dem originalen paper](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf) und anderen Ressourcen zu implementieren.
+Ein paar Monate später fand ich jedoch [diese Website](https://xviniette.github.io/FlappyLearning/). Während ich das Repository überflog hörte ich zum ersten Mal von Neuroevolution. Nachdem ich das Thema ein wenig recherchiert hatte, fühlte ich mich zuversichtlich, meinen eigenen NEAT-Algorithmus mithilfe von [dem originalen paper](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf) und anderen Ressourcen zu implementieren.
 
 Heute besteht das Projekt aus verschiedenen Spielmodi wie:
 - Einzelspieler

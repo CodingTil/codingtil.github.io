@@ -139,7 +139,6 @@ export default {
 		return {
 			title: 'About me | Til Mohr',
 			htmlAttrs: {
-				title: 'About me | Til Mohr',
 				...i18nHead.htmlAttrs
 			},
 			meta: [

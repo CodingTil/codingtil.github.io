@@ -10,7 +10,6 @@ export default {
 		return {
 			title: this.project.title,
 			htmlAttrs: {
-				title: this.project.title,
 				...i18nHead.htmlAttrs
 			},
 			meta: [
