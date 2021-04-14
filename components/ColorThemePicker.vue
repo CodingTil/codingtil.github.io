@@ -39,6 +39,8 @@ export default {
 			this.$cookies.set('theme', this.theme(), {
 				path: '/',
 				maxAge: 60*60*24,
+				sameSite: 'lax',
+				secure: true
 			});
 
 			// add new color theme

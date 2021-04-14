@@ -9,6 +9,7 @@
 	font-family: 'Poppins';
 	font-weight: 400;
 	src: url('../fonts/Poppins/Poppins-Regular.ttf');
+	font-display: fallback;
 }
 
 @tailwind base;

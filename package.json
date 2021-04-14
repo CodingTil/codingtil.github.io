@@ -9,6 +9,7 @@
 		"generate": "nuxt generate"
 	},
 	"dependencies": {
+		"@dansmaculotte/nuxt-security": "0.0.3",
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
 		"@fortawesome/free-solid-svg-icons": "^5.15.3",
 		"@nuxt/components": "^2.1.6",

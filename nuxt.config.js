@@ -7,7 +7,7 @@ export default {
 			{
 				rel: 'icon',
 				type: 'image/x-icon',
-				href: 'favicon.ico',
+				href: '/favicon.ico',
 			},
 		],
 		meta: [
@@ -46,6 +46,7 @@ export default {
 		'@nuxt/content',
 		'nuxt-i18n',
 		'cookie-universal-nuxt',
+		'@dansmaculotte/nuxt-security',
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -60,6 +61,9 @@ export default {
 	server: {
 		host: '0.0.0.0',
 		port: 80
+	},
+
+	security: {
 	},
 
 	content: {
@@ -82,6 +86,17 @@ export default {
 		],
 		strategy: 'prefix_except_default',
 		defaultLocale: 'en',
+		detectBrowserLanguage: {
+			alwaysRedirect: true,
+			fallbackLocale: 'en',
+			onlyOnRoot: false,
+			onlyOnNoPrefix: true,
+			useCookie: true,
+			cookieCrossOrigin: false,
+			cookieDomain: null,
+			cookieKey: 'i18n_language',
+			cookieSecure: true
+		},
 		vueI18nLoader: true,
 		vueI18n: {
 			fallbackLocale: 'en',
