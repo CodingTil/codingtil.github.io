@@ -64,6 +64,12 @@ export default {
 	},
 
 	security: {
+		hsts: {
+			maxAge: 15552000,
+			includeSubDomains: true,
+			preload: true
+		},
+		additionalHeaders: true
 	},
 
 	content: {
