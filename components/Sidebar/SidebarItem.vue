@@ -1,8 +1,6 @@
 <template>
 	<div class="sidebar-item">
-
-
-		<slot/>
+		<slot />
 	</div>
 </template>
 
@@ -17,12 +15,11 @@ export default {
 			type: Function,
 			required: true,
 		},
-	}
-}
+	},
+};
 </script>
 
 <style>
 .sidebar-item {
-
 }
 </style>

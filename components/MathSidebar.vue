@@ -11,16 +11,12 @@ de:
 </i18n>
 
 <template>
-	<sidebar title="Math">
-	</sidebar>
+	<sidebar title="Math"></sidebar>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>

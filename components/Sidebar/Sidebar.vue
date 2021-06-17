@@ -1,8 +1,6 @@
 <template>
 	<nav class="sidebar-container">
-		<div class="sidebar">
-
-		</div>
+		<div class="sidebar"></div>
 	</nav>
 </template>
 
@@ -13,18 +11,17 @@ export default {
 			type: String,
 			required: true,
 		},
-	}
-}
+	},
+};
 </script>
 
 <style>
 .sidebar-container {
-	@apply h-screen max-w-xs w-full fixed top-0
-		overflow-x-hidden overflow-y-auto
+	@apply w-72 h-screen z-40 top-0 sticky overflow-y-visible flex-none
 		border-gray-500 border-4;
 }
 
 .sidebar {
-
+	@apply h-full overflow-y-auto mr-0 block;
 }
 </style>

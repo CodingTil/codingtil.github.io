@@ -2,7 +2,15 @@
 	<div class="navbar-container">
 		<nav class="navbar">
 			<logo />
-			<div class="justify-self-end inline-flex space-x-2 content-center items-center">
+			<div
+				class="
+					justify-self-end
+					inline-flex
+					space-x-2
+					content-center
+					items-center
+				"
+			>
 				<language-switcher />
 				<color-theme-picker />
 			</div>
@@ -11,9 +19,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>

@@ -1,5 +1,6 @@
 <template>
-	<div class="flex flex-col min-h-screen"> <!-- Pushing Footer to Bottom -->
+	<div class="flex flex-col min-h-screen">
+		<!-- Pushing Footer to Bottom -->
 		<navbar />
 		<!-- Page Content -->
 		<nuxt />
@@ -9,43 +10,45 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex';
+import { mapMutations, mapGetters } from "vuex";
 
 export default {
 	methods: {
 		...mapMutations({
-			toggle: 'colorTheme/toggle'
+			toggle: "colorTheme/toggle",
 		}),
 		...mapGetters({
-			theme: 'colorTheme/getTheme'
-		})
+			theme: "colorTheme/getTheme",
+		}),
 	},
-	mounted: function() {
-		const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+	mounted: function () {
+		const darkMediaQuery = window.matchMedia(
+			"(prefers-color-scheme: dark)"
+		);
 		var theme;
 		if (darkMediaQuery.matches) {
-			theme = this.$cookies.get('theme') || 'theme-dark';
+			theme = this.$cookies.get("theme") || "theme-dark";
 		} else {
-			theme = this.$cookies.get('theme') || 'theme-light';
+			theme = this.$cookies.get("theme") || "theme-light";
 		}
 		if (theme != this.theme()) {
 			this.toggle();
 		}
 		// set cookie / refresh cookie
-		this.$cookies.set('theme', this.theme(), {
-			path: '/',
+		this.$cookies.set("theme", this.theme(), {
+			path: "/",
 			maxAge: 60 * 60 * 24,
-			sameSite: 'lax',
-			secure: true
+			sameSite: "lax",
+			secure: true,
 		});
 
 		// add class to body
-		var body = document.getElementsByTagName('body')[0];
+		var body = document.getElementsByTagName("body")[0];
 		body.classList.add(this.theme());
 
 		// add other classes to body
-		body.classList.add('my-body')
-	}
+		body.classList.add("my-body");
+	},
 };
 </script>
 
@@ -58,7 +61,8 @@ export default {
 	top: 0;
 }
 
-.trans, .trans * {
+.trans,
+.trans * {
 	@apply transition duration-300 ease-in-out;
 }
 
