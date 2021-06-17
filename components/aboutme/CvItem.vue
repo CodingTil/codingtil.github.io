@@ -54,7 +54,7 @@ export default {
 
 <style>
 .cv-item {
-	@apply mx-8 my-6 px-5 py-4
+	@apply my-6 pl-5 py-4
 		border-l-8 border-solid;
 }
 

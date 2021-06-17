@@ -37,76 +37,76 @@ de:
 </i18n>
 
 <template>
-	<div class="card_container">
+	<div class="card-container">
 		<!-- Card -->
-		<NuxtLink :to="localePath('/')" class="card from-yellow-300 hover:from-yellow-400 to-yellow-600 hover:to-yellow-700">
-			<div class="card_icon">
+		<nuxt-link :to="localePath('/math/stochastics/data-analysis')" class="card from-yellow-300 hover:from-yellow-400 to-yellow-600 hover:to-yellow-700">
+			<div class="card-icon">
 				<fa :icon="faCalculator" class="text-rainbow-5 text-7xl" style="filter: drop-shadow(1px 1px 1px black);" />
 			</div>
-			<div class="card_title">
+			<div class="card-title">
 				{{ $t('maths.title') }}
 			</div>
-			<div class="card_subtitle">
+			<div class="card-subtitle">
 				<span>{{ $t('maths.description') }}</span>
 				<span class="italic">{{ $t('indev') }}</span>
 			</div>
-		</NuxtLink>
+		</nuxt-link>
 
 		<!-- Card -->
-		<NuxtLink :to="localePath('/')" class="card from-green-400 hover:from-green-500 to-yellow-400 hover:to-yellow-500">
-			<div class="card_icon">
+		<nuxt-link :to="localePath('/')" class="card from-green-400 hover:from-green-500 to-yellow-400 hover:to-yellow-500">
+			<div class="card-icon">
 				<fa :icon="faCode" class="text-rainbow-6 text-7xl" style="filter: drop-shadow(1px 1px 1px black);" />
 			</div>
-			<div class="card_title">
+			<div class="card-title">
 				{{ $t('algorithms.title') }}
 			</div>
-			<div class="card_subtitle">
+			<div class="card-subtitle">
 				<span>{{ $t('algorithms.description') }}</span>
 				<span class="italic">{{ $t('indev') }}</span>
 			</div>
-		</NuxtLink>
+		</nuxt-link>
 
 		<!-- Card -->
-		<NuxtLink :to="localePath('/')" class="card from-yellow-500 hover:from-yellow-600 to-red-400 hover:to-red-500">
-			<div class="card_icon">
+		<nuxt-link :to="localePath('/')" class="card from-yellow-500 hover:from-yellow-600 to-red-400 hover:to-red-500">
+			<div class="card-icon">
 				<fa :icon="faDatabase" class="text-rainbow-1 text-7xl" style="filter: drop-shadow(1px 1px 1px black);" />
 			</div>
-			<div class="card_title">
+			<div class="card-title">
 				{{ $t('datastructures.title') }}
 			</div>
-			<div class="card_subtitle">
+			<div class="card-subtitle">
 				<span>{{ $t('datastructures.description') }}</span>
 				<span class="italic">{{ $t('indev') }}</span>
 			</div>
-		</NuxtLink>
+		</nuxt-link>
 
 		<!-- Card -->
-		<NuxtLink :to="localePath('/')" class="card from-pink-400 hover:from-pink-500 to-purple-500 hover:to-purple-600">
-			<div class="card_icon">
+		<nuxt-link :to="localePath('/')" class="card from-pink-400 hover:from-pink-500 to-purple-500 hover:to-purple-600">
+			<div class="card-icon">
 				<fa :icon="faTools" class="text-rainbow-3 text-7xl" style="filter: drop-shadow(1px 1px 1px black);" />
 			</div>
-			<div class="card_title">
+			<div class="card-title">
 				{{ $t('tools.title') }}
 			</div>
-			<div class="card_subtitle">
+			<div class="card-subtitle">
 				<span>{{ $t('tools.description') }}</span>
 				<span class="italic">{{ $t('indev') }}</span>
 			</div>
-		</NuxtLink>
+		</nuxt-link>
 
 		<!-- Card -->
-		<NuxtLink :to="localePath('/aboutme')" class="card from-blue-500 hover:from-blue-600 to-pink-600 hover:to-pink-700">
-			<div class="card_icon">
+		<nuxt-link :to="localePath('/aboutme')" class="card from-blue-500 hover:from-blue-600 to-pink-600 hover:to-pink-700">
+			<div class="card-icon">
 				<fa :icon="faAddressCard" class="text-rainbow-4 text-7xl" style="filter: drop-shadow(1px 1px 1px black);" />
 			</div>
-			<div class="card_title">
+			<div class="card-title">
 				{{ $t('aboutme.title') }}
 			</div>
-			<div class="card_subtitle">
+			<div class="card-subtitle">
 				<span>{{ $t('aboutme.description') }}</span>
 				<span class="italic">{{ $t('indev') }}</span>
 			</div>
-		</NuxtLink>
+		</nuxt-link>
 	</div>
 </template>
 
@@ -141,12 +141,12 @@ export default {
 </script>
 
 <style scoped>
-.card_container {
-	@apply flex flex-wrap justify-evenly container mx-auto max-w-6xl;
+.card-container {
+	@apply flex flex-wrap my-4 p-4 lg:p-0 gap-x-12 gap-y-12 container mx-auto max-w-7xl;
 }
 
 .card {
-	@apply flex flex-1 flex-col m-6 p-8 bg-gradient-to-br rounded
+	@apply flex flex-1 flex-col p-8 bg-gradient-to-br rounded
 			cursor-pointer
 			shadow-lg hover:shadow-2xl;
 }
@@ -155,7 +155,7 @@ export default {
 	transform: scale(1.05);
 }
 
-.card_icon {
+.card-icon {
 	@apply flex justify-center p-0 mt-6 mb-2;
 }
 
@@ -163,11 +163,11 @@ export default {
 	filter: drop-shadow(0px 0px 20px white);
 }
 
-.card_title {
+.card-title {
 	@apply flex justify-center content-center text-background-primary text-2xl md:text-4xl font-bold uppercase mx-4 my-2;
 }
 
-.card_subtitle {
+.card-subtitle {
 	@apply flex flex-col justify-center content-center text-background-secondary text-center mt-1 mb-4 mx-4;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<div class="container mx-0 my-0 w-screen min-w-full">
-		<div class="px-2 mx-auto mt-4 mb-5 max-w-6xl">
+		<div class="mx-auto px-4 lg:px-0 mt-4 mb-5 max-w-7xl">
 			<div class="flex flex-row justify-center md:justify-between items-center flex-wrap md:flex-nowrap">
 				<div class="mb-4">
 					<h1 class="text-foreground-primary text-4xl font-bold mb-2">{{ project.title }}</h1>
@@ -23,11 +23,9 @@
 
 		<div :class='"h-2 w-full " + project.color' />
 
-		<div class="mt-8 mb-14 px-2 mx-auto max-w-6xl">
+		<div class="mt-8 mb-14 px-4 lg:px-0 mx-auto max-w-7xl">
 			<Content :document="project" />
 		</div>
-
-		<FooterRainbow />
 	</div>
 </template>
 

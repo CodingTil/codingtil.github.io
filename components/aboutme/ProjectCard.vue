@@ -1,5 +1,5 @@
 <template>
-	<NuxtLink class="project-box" :to="localePath('/aboutme/projects/' + document.slug)">
+	<nuxt-link class="project-box" :to="localePath('/aboutme/projects/' + document.slug)">
 		<div class="thumbnail">
 			<img :src="require(`~/assets/images/projects${document.image}`)" />
 			<div :class="'overlay overlay-text hover:' + document.color">
@@ -10,7 +10,7 @@
 		<div class="title">
 			{{ document.title }}
 		</div>
-	</NuxtLink>
+	</nuxt-link>
 </template>
 
 <script>

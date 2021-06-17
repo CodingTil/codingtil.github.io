@@ -18,7 +18,7 @@ de:
 	<div class="min-w-full">
 		<!-- Intro -->
 		<section class="cv-section">
-			<div class="section-box mx-8 px-5">
+			<div class="section-box">
 				<div class="flex flex-row justify-center items-center flex-wrap lg:flex-nowrap">
 					<div class="border-r-0 lg:border-r-2 border-solid border-foreground-tertiary pr-2">
 						<Content :document="intro" />
@@ -46,7 +46,7 @@ de:
 					{{ $t('projects') }}
 				</div>
 				<div class="flex flex-row flex-wrap justify-around p-5">
-					<ProjectCard v-for="(post, i) in projects" :key="i" :document='post' />
+					<project-card v-for="(post, i) in projects" :key="i" :document='post' />
 				</div>
 			</div>
 		</section>
@@ -54,7 +54,7 @@ de:
 
 		<!-- More about me -->
 		<section class="cv-section bg-foreground-tertiary text-background-primary">
-			<div class="section-box px-5">
+			<div class="section-box">
 				<div class="section-title border-background-primary">
 					{{ $t('more') }}
 				</div>
@@ -83,7 +83,7 @@ de:
 				</div>
 
 				<div v-for="(post, i) in teachings" :key="i" class="min-w-full w-full">
-					<CvItem
+					<cv-item
 						:main_header="post.title"
 						:right_header='post.location'
 						:subtitle='post.employer + "<div />" + post.date_range'
@@ -102,7 +102,7 @@ de:
 				</div>
 
 				<div v-for="(post, i) in educations" :key="i" class="min-w-full w-full">
-					<CvItem
+					<cv-item
 						:main_header="post.title"
 						:right_header="post.location"
 						:subtitle='post.education + "<div />" + post.date_range'
@@ -114,7 +114,7 @@ de:
 
 
 		<!-- Contact -->
-		<section class="mx-0 lg:mx-auto max-w-6xl flex flex-col lg:flex-row flex-wrap items-center justify-evenly space-y-1 py-8">
+		<section class="mx-0 lg:mx-auto max-w-7xl flex flex-col lg:flex-row flex-wrap items-center justify-evenly space-y-1 py-8">
 			<a href="mailto:me@tilmohr.com" class="flex items-center text-foreground-primary">
 				<fa :icon="faEnvelope" />
 				<span class="ml-2">me@tilmohr.com</span>
@@ -124,8 +124,6 @@ de:
 				<span class="ml-2">CodingTil</span>
 			</a>
 		</section>
-
-		<FooterRainbow />
 	</div>
 </template>
 
@@ -189,7 +187,7 @@ export default {
 }
 
 .section-box {
-	@apply flex flex-col justify-center items-center py-8 mx-0 lg:mx-auto max-w-6xl;
+	@apply flex flex-col justify-center items-center py-8 px-4 lg:px-0 mx-0 lg:mx-auto max-w-7xl;
 }
 
 .section-title {

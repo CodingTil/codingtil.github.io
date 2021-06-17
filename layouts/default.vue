@@ -1,8 +1,10 @@
 <template>
-	<div>
-		<Navbar />
+	<div class="flex flex-col min-h-screen"> <!-- Pushing Footer to Bottom -->
+		<navbar />
 		<!-- Page Content -->
-		<Nuxt />
+		<nuxt />
+
+		<footer-rainbow />
 	</div>
 </template>
 
@@ -48,10 +50,6 @@ export default {
 </script>
 
 <style>
-.my-body {
-	@apply trans content-wrapper font-poppins bg-background-primary;
-}
-
 .content-wrapper {
 	min-height: 100vh;
 	min-width: 100%;
@@ -62,5 +60,9 @@ export default {
 
 .trans, .trans * {
 	@apply transition duration-300 ease-in-out;
+}
+
+.my-body {
+	@apply trans content-wrapper font-poppins bg-background-primary;
 }
 </style>

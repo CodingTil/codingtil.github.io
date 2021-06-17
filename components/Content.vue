@@ -1,5 +1,5 @@
 <template>
-	<NuxtContent class="prose" :document="document" />
+	<nuxt-content class="prose" :document="document" />
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
 
 <style>
 .nuxt-content {
-	@apply container my-3 mx-1 text-foreground-primary;
+	@apply container my-3 text-foreground-primary;
 }
 
 .nuxt-content img {

@@ -1,13 +1,12 @@
 <template>
-	<div class="container px-3 lg:mx-auto max-w-6xl py-4 flex justify-between items-center">
-		<div class="flex justify-start items-center">
-			<NuxtLink :to="localePath('/')" class="text-foreground-primary">Home</NuxtLink>
-		</div>
-		<div class="flex justify-end items-center space-x-2">
-			<language-switcher />
-			<color-theme-picker />
-			<!-- <CookieSelector /> -->
-		</div>
+	<div class="navbar-container">
+		<nav class="navbar">
+			<logo />
+			<div class="justify-self-end inline-flex space-x-2 content-center items-center">
+				<language-switcher />
+				<color-theme-picker />
+			</div>
+		</nav>
 	</div>
 </template>
 
@@ -18,5 +17,12 @@ export default {
 </script>
 
 <style>
+.navbar-container {
+	@apply sticky top-0 z-50 bg-background-primary w-full border-b-2 border-background-secondary;
+}
 
+.navbar {
+	@apply container mx-auto max-w-7xl pt-6 pb-4 px-4 md:px-0
+			flex content-center justify-between items-center;
+}
 </style>

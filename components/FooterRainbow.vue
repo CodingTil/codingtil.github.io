@@ -17,7 +17,7 @@ export default {
 
 <style>
 .rainbow-footer {
-	@apply flex flex-nowrap min-w-full h-3;
+	@apply mt-auto flex flex-nowrap min-w-full h-3 z-40;
 }
 
 .rainbow-stripe {

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<button @click.prevent="toggle"
-				class="btn inline-flex items-center outline-none focus:outline-none">
+				class="btn outline-none focus:outline-none">
 			<div v-if="this.theme()==='theme-light'" class="text-indigo-900 hover:text-indigo-700">
 				<fa :icon="faMoon" class="text-3xl" style="filter: drop-shadow(1px 1px 1px black);" />
 			</div>

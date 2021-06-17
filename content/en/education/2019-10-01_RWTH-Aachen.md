@@ -69,7 +69,7 @@ location: Aachen, Germany
 	<div class="min-w-full cell">
 		<ul>
 			<li>Introduction to Business Administration</li>
-			<li>Quantitative Methods<sup>**</sup></li>
+			<li>Operations Research<sup>**</sup></li>
 			<li>Decision Science<sup>**</sup></li>
 			<li>Accounting<sup>**</sup></li>
 		</ul>
