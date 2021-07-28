@@ -30,7 +30,9 @@ export default {
 		dirs: [
 			'~/components',
 			'~/components/aboutme',
-			'~/components/aboutme/images'
+			'~/components/aboutme/images',
+			'~/components/Layout',
+			'~/components/Sidebar',
 		]
 	},
 

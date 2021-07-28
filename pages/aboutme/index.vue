@@ -25,13 +25,13 @@ de:
 						justify-center
 						items-center
 						flex-wrap
-						lg:flex-nowrap
+						xl:flex-nowrap
 					"
 				>
 					<div
 						class="
 							border-r-0
-							lg:border-r-2
+							xl:border-r-2
 							border-solid border-foreground-tertiary
 							pr-2
 						"
@@ -41,19 +41,19 @@ de:
 					<div
 						class="
 							border-t-2
-							lg:border-t-0
+							xl:border-t-0
 							border-solid border-foreground-tertiary
 							p-2
-							lg:pr-0
+							xl:pr-0
 						"
 					>
 						<div
 							class="
 								flex flex-row
-								lg:flex-col
+								xl:flex-col
 								flex-wrap
 								justify-center
-								lg:justify-start
+								xl:justify-start
 							"
 						>
 							<a
@@ -184,10 +184,10 @@ de:
 		<section
 			class="
 				mx-0
-				lg:mx-auto
+				xl:mx-auto
 				max-w-7xl
 				flex flex-col
-				lg:flex-row
+				xl:flex-row
 				flex-wrap
 				items-center
 				justify-evenly
@@ -287,7 +287,7 @@ export default {
 }
 
 .section-box {
-	@apply flex flex-col justify-center items-center py-8 px-4 lg:px-0 mx-0 lg:mx-auto max-w-7xl;
+	@apply flex flex-col justify-center items-center py-8 px-4 xl:px-0 mx-0 xl:mx-auto max-w-7xl;
 }
 
 .section-title {

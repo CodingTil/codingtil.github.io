@@ -1,6 +1,9 @@
 <template>
 	<nav class="sidebar-container">
-		<div class="sidebar"></div>
+		<div class="sidebar-gradient-top" />
+		<div class="sidebar">
+			<slot />
+		</div>
 	</nav>
 </template>
 
@@ -17,11 +20,15 @@ export default {
 
 <style>
 .sidebar-container {
-	@apply w-72 h-screen z-40 top-0 sticky overflow-y-visible flex-none
-		border-gray-500 border-4;
+	@apply w-72 z-40 top-0 sticky overflow-y-visible flex-none;
+	height: calc(100vh - 5rem - 0.75rem); /* Header 5rem, Footer 0.75rem */
 }
 
 .sidebar {
-	@apply h-full overflow-y-auto mr-0 block;
+	@apply px-1 py-8 pr-4 mr-0 h-full overflow-y-scroll block;
+}
+
+.sidebar-gradient-top {
+	@apply hidden top-0 lg:block h-12 pointer-events-none absolute inset-x-0 z-10 bg-gradient-to-b from-background-primary;
 }
 </style>

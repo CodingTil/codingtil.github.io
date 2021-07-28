@@ -2,8 +2,8 @@
 	<div class="cv-item">
 		<div class="cv-item-header">
 			<div class="cv-item-header-main">
-				<div v-if='link'>
-					<a class="cv-item-link" :href='link'>
+				<div v-if="link">
+					<a class="cv-item-link" :href="link">
 						{{ main_header }}
 					</a>
 				</div>
@@ -15,8 +15,7 @@
 				{{ right_header }}
 			</div>
 		</div>
-		<div class="cv-item-subtitle">
-		</div>
+		<div class="cv-item-subtitle"></div>
 		<Content :document="content" />
 	</div>
 </template>
@@ -45,11 +44,11 @@ export default {
 			required: true,
 		},
 	},
-	mounted: function() {
-		var subtitleElement = this.$el.querySelector('.cv-item-subtitle')
+	mounted: function () {
+		var subtitleElement = this.$el.querySelector(".cv-item-subtitle");
 		subtitleElement.innerHTML += this.subtitle;
-	}
-}
+	},
+};
 </script>
 
 <style>
@@ -59,15 +58,15 @@ export default {
 }
 
 .cv-item-header {
-		@apply block lg:flex lg:justify-between text-foreground-primary;
+	@apply block xl:flex xl:justify-between text-foreground-primary;
 }
 
 .cv-item-header-main {
-	@apply text-lg font-bold text-left;
+	@apply text-xl font-bold text-left;
 }
 
 .cv-item-header-right {
-	@apply text-left lg:text-right;
+	@apply text-left xl:text-right;
 }
 
 .cv-item-subtitle {
