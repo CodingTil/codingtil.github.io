@@ -40,7 +40,7 @@ de:
 	<div class="card-container">
 		<!-- Card -->
 		<nuxt-link
-			:to="localePath('/math/stochastics/data-analysis')"
+			:to="localePath('/math/numbers/primes')"
 			class="
 				card
 				from-yellow-300
@@ -61,7 +61,6 @@ de:
 			</div>
 			<div class="card-subtitle">
 				<span>{{ $t("maths.description") }}</span>
-				<span class="italic">{{ $t("indev") }}</span>
 			</div>
 		</nuxt-link>
 
@@ -88,7 +87,10 @@ de:
 			</div>
 			<div class="card-subtitle">
 				<span>{{ $t("algorithms.description") }}</span>
-				<span class="italic">{{ $t("indev") }}</span>
+				<span class="italic">
+					<br />
+					{{ $t("indev") }}
+				</span>
 			</div>
 		</nuxt-link>
 
@@ -115,7 +117,10 @@ de:
 			</div>
 			<div class="card-subtitle">
 				<span>{{ $t("datastructures.description") }}</span>
-				<span class="italic">{{ $t("indev") }}</span>
+				<span class="italic">
+					<br />
+					{{ $t("indev") }}
+				</span>
 			</div>
 		</nuxt-link>
 
@@ -142,7 +147,10 @@ de:
 			</div>
 			<div class="card-subtitle">
 				<span>{{ $t("tools.description") }}</span>
-				<span class="italic">{{ $t("indev") }}</span>
+				<span class="italic">
+					<br />
+					{{ $t("indev") }}
+				</span>
 			</div>
 		</nuxt-link>
 
@@ -169,7 +177,6 @@ de:
 			</div>
 			<div class="card-subtitle">
 				<span>{{ $t("aboutme.description") }}</span>
-				<span class="italic">{{ $t("indev") }}</span>
 			</div>
 		</nuxt-link>
 	</div>

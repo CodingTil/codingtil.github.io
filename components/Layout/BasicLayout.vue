@@ -13,6 +13,7 @@ export default {};
 <style>
 .content-container {
 	@apply container mx-auto max-w-7xl;
+	height: calc(100vh - 5rem - 0.75rem); /* Header 5rem, Footer 0.75rem */
 }
 
 .wrapper {

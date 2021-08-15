@@ -20,7 +20,7 @@ export default {
 
 <style>
 .sidebar-container {
-	@apply w-72 z-40 top-0 sticky overflow-y-visible flex-none;
+	@apply w-72 z-40 top-0 sticky flex-none hidden md:block; /* Cant leave this like that. SM needs navigation as well. */
 	height: calc(100vh - 5rem - 0.75rem); /* Header 5rem, Footer 0.75rem */
 }
 

@@ -48,7 +48,9 @@ module.exports = {
 		}
 	},
 	variants: {
-		extend: {},
+		extend: {
+			overflow: ['hover', 'focus'],
+		},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
