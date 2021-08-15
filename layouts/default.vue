@@ -55,7 +55,7 @@ export default {
 <style>
 .content-wrapper {
 	min-height: 100vh;
-	min-width: 100%;
+	width: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;

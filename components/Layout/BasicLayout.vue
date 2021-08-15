@@ -17,6 +17,6 @@ export default {};
 }
 
 .wrapper {
-	@apply flex relative;
+	@apply flex flex-row relative;
 }
 </style>
