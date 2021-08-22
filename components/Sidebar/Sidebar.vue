@@ -59,8 +59,9 @@ export default {
 
 <style>
 .sidebar-container {
-	@apply z-40 top-0 sticky flex-1;
-	height: calc(100vh - 5rem - 0.75rem); /* Header 5rem, Footer 0.75rem */
+	@apply top-20 sticky overflow-hidden h-screen; /* top-20 because header has h-20 */
+	min-height: calc(100vh - 5rem - 0.75rem); /* Header 5rem, Footer 0.75rem */
+	max-height: calc(100vh - 5rem); /* Header 5rem */
 }
 
 .sidebar-collapse-sm {

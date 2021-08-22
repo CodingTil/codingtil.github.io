@@ -33,6 +33,7 @@ export default {
 			'~/components/aboutme/images',
 			'~/components/Layout',
 			'~/components/Sidebar',
+			'~/layouts',
 		]
 	},
 

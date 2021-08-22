@@ -19,7 +19,7 @@ de:
 </i18n>
 
 <template>
-	<math-layout>
+	<div>
 		<h1>{{ $t("title") }}</h1>
 
 		<!-- Prime number check -->
@@ -101,7 +101,7 @@ de:
 				{{ primefactors(primefactornumber).join(", ") }}
 			</div>
 		</section>
-	</math-layout>
+	</div>
 </template>
 
 <script>
@@ -111,6 +111,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default {
+	layout: "math-layout",
 	head() {
 		const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
 		return {
