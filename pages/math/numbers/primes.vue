@@ -5,7 +5,7 @@ en:
   enternumber: "Enter a number:"
   generate: "Sieve of Eratosthenes"
   generaterequest: "Generate prime numbers between"
-  primefactors: "Primfaktorzerlegung"
+  primefactors: "Prime factorization"
   and: "and"
 
 de:
@@ -15,7 +15,7 @@ de:
   generate: "Sieb des Eratosthenes"
   generaterequest: "Generiere alle Primzahlen zwischen"
   primefactors: "Primfaktorzerlegung"
-  and: "and"
+  and: "und"
 </i18n>
 
 <template>

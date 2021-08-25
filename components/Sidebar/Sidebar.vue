@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<nav class="sidebar-container hidden md:block w-72" ref="sidebar">
-			<div class="sidebar-gradient-top" />
 			<div class="sidebar">
 				<slot />
 			</div>
@@ -73,9 +72,5 @@ export default {
 
 .sidebar {
 	@apply px-1 py-8 pr-4 mr-0 h-full overflow-y-scroll block;
-}
-
-.sidebar-gradient-top {
-	@apply hidden top-0 lg:block h-12 pointer-events-none absolute inset-x-0 z-10 bg-gradient-to-b from-background-primary;
 }
 </style>
