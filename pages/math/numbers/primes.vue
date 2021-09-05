@@ -27,12 +27,7 @@ de:
 			<h2>{{ $t("primecheck") }}</h2>
 			<div class="flex space-x-2 items-center">
 				<label>{{ $t("enternumber") }}</label>
-				<input
-					type="text"
-					name="prime"
-					size="5"
-					v-model="primenumbercheck"
-				/>
+				<number-input v-model="primenumbercheck" />
 				<div v-if="primenumbercheck">
 					<div v-if="isPrime(primenumbercheck)">
 						<fa
@@ -57,9 +52,9 @@ de:
 			<h2>{{ $t("generate") }}</h2>
 			<div class="flex space-x-2 items-center">
 				<label>{{ $t("generaterequest") }}</label>
-				<input type="text" name="from" size="1" v-model="from" />
+				<number-input v-model="from" />
 				<label>{{ $t("and") }}</label>
-				<input type="text" name="to" size="1" v-model="to" />
+				<number-input v-model="to" />
 				<label>:</label>
 			</div>
 			<div
@@ -82,12 +77,7 @@ de:
 			<h2>{{ $t("primefactors") }}</h2>
 			<div class="flex space-x-2 items-center">
 				<label>{{ $t("enternumber") }}</label>
-				<input
-					type="text"
-					name="prime"
-					size="5"
-					v-model="primefactornumber"
-				/>
+				<number-input v-model="primefactornumber" />
 			</div>
 			<div
 				class="
