@@ -13,7 +13,7 @@ location: Aachen, Germany
 			<li>Programming</li>
 			<li>Data Structures and Algorithms</li>
 			<li>Introduction to Software Engineering</li>
-			<li>Data Bases and Information Systems<sup>**</sup></li>
+			<li>Data Bases and Information Systems</li>
 		</ul>
 	</div>
 	<div class="cell">
@@ -22,7 +22,7 @@ location: Aachen, Germany
 			<li>Introduction to Computer Engineering</li>
 			<li>Operating Systems and Systems Software</li>
 			<li>Systems Programming Lab Course</li>
-			<li>Data Communication and Security<sup>**</sup></li>
+			<li>Data Communication and Security</li>
 		</ul>
 	</div>
 	<div class="cell">
@@ -39,7 +39,7 @@ location: Aachen, Germany
 			<li>Discrete Structures</li>
 			<li>Analysis for Computer Scientists</li>
 			<li>Linear Algebra</li>
-			<li>Introduction to Applied Stochastics<sup>**</sup></li>
+			<li>Introduction to Applied Stochastics</li>
 		</ul>
 	</div>
 	<div class="cell">

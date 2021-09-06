@@ -13,7 +13,7 @@ location: Aachen, Deutschland
 			<li>Programmierung</li>
 			<li>Datenstrukturen und Algorithmen</li>
 			<li>Einführung in die Softwaretechnik</li>
-			<li>Datenbanken und Informationssysteme<sup>**</sup></li>
+			<li>Datenbanken und Informationssysteme</li>
 		</ul>
 	</div>
 	<div class="cell">
@@ -22,7 +22,7 @@ location: Aachen, Deutschland
 			<li>Einführung in die technische Informatik</li>
 			<li>Betriebssysteme und Systemsoftware</li>
 			<li>Praktikum Systemprogrammierung</li>
-			<li>Datenkommunikation und Sicherheit<sup>**</sup></li>
+			<li>Datenkommunikation und Sicherheit</li>
 		</ul>
 	</div>
 	<div class="cell">
@@ -39,7 +39,7 @@ location: Aachen, Deutschland
 			<li>Diskrete Strukturen</li>
 			<li>Analysis für Informatiker</li>
 			<li>Lineare Algebra</li>
-			<li>Einführung in die angewandte Stochastik<sup>**</sup></li>
+			<li>Einführung in die angewandte Stochastik</li>
 		</ul>
 	</div>
 	<div class="cell">
