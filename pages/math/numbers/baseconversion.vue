@@ -2,10 +2,12 @@
 en:
   title: "Base Conversion"
   baseconversion: "Convert between different Bases"
+  convertto: "convert to"
 
 de:
   title: "Basenumrechnung"
   baseconversion: "Zwischen verschiedenen Basen umrechnen"
+  convertto: "umwandeln zu"
 </i18n>
 
 <template>
@@ -15,6 +17,18 @@ de:
 		<!-- Base Conversion -->
 		<section class="my-6">
 			<h2>{{ $t("baseconversion") }}</h2>
+			<div class="flex flex-col space-y-4">
+				<base-number-input
+					v-model="baseconversionnumber"
+					class="left"
+					preselectedBase="2"
+				/>
+				<base-number-input
+					v-model="baseconversionnumber"
+					class="left"
+					preselectedBase="10"
+				/>
+			</div>
 		</section>
 	</div>
 </template>
@@ -38,6 +52,11 @@ export default {
 				...i18nHead.meta,
 			],
 			link: [...i18nHead.link],
+		};
+	},
+	data() {
+		return {
+			baseconversionnumber: null,
 		};
 	},
 };

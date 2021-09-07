@@ -30,7 +30,7 @@ location: Aachen, Deutschland
 		<ul>
 			<li>Formale Systeme, Automaten, Prozesse</li>
 			<li>Berechenbarkeit und Komplexität</li>
-			<li>Mathematische Logik<sup>**</sup></li>
+			<li>Mathematische Logik</li>
 		</ul>
 	</div>
 	<div class="cell">

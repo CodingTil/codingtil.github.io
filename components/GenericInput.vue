@@ -3,8 +3,9 @@
 		type="text"
 		size="5"
 		ref="input"
-		:value="objectValue"
+		:value="stringValue"
 		@input="inputHandler($event.target.value)"
+		@enter="inputHandler($event.target.value)"
 	/>
 </template>
 
@@ -16,6 +17,10 @@ export default {
 			type: Function,
 			default: (x) => x,
 		},
+		toStringType: {
+			type: Function,
+			default: (x) => x + "",
+		},
 		filter: {
 			type: Function,
 			default: (x) => x,
@@ -23,7 +28,7 @@ export default {
 	},
 	data() {
 		return {
-			objectValue: null,
+			stringValue: "",
 			handler: true,
 		};
 	},
@@ -31,32 +36,19 @@ export default {
 		value: {
 			immediate: true,
 			handler(val) {
-				let newValue = val;
-				if (newValue) {
-					newValue = this.toObjectType(newValue);
-					newValue = this.filter(newValue);
-					if (newValue !== val) {
-						this.$emit("input", newValue);
-					}
-				}
-				this.objectValue = newValue;
+				var str = this.toStringType(val);
+				this.stringValue = val && val != 0 ? str : "";
 			},
 		},
 	},
 	methods: {
-		inputHandler(val) {
-			this.updateValue(this.toObjectType(val), val);
-		},
-		updateValue: function (val, strVal = null) {
-			const oldVal = this.objectValue;
-			val = this.filter(val);
-			if (val === oldVal) {
-				this.$refs.input.value =
-					strVal && val === this.toObjectType(strVal) ? strVal : null;
-				return;
-			}
-			this.objectValue = val;
-			this.$emit("input", val);
+		inputHandler(str) {
+			var oldVal = this.stringValue;
+			var newValue = this.toObjectType(str);
+			var x = newValue;
+			newValue = this.filter(newValue);
+			this.stringValue = this.toStringType(newValue);
+			this.$emit("input", newValue);
 		},
 	},
 };

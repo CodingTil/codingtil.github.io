@@ -28,4 +28,8 @@ export default {};
 .content input {
 	@apply bg-background-secondary text-foreground-primary rounded border-background-tertiary border-2 shadow;
 }
+
+.content select {
+	@apply bg-background-secondary text-foreground-primary rounded border-background-tertiary border-2 shadow;
+}
 </style>

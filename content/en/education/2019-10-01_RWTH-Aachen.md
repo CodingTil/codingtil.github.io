@@ -30,7 +30,7 @@ location: Aachen, Germany
 		<ul>
 			<li>Formal Systems, Automata and Processes</li>
 			<li>Computability and Complexity</li>
-			<li>Mathematical Logic<sup>**</sup></li>
+			<li>Mathematical Logic</li>
 		</ul>
 	</div>
 	<div class="cell">

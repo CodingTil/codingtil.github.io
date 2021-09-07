@@ -30,9 +30,9 @@ export default {
 		},
 	},
 	methods: {
-		toNumber(val) {
-			let num = parseFloat(val);
-			if (isNaN(val) || !isFinite(val)) {
+		toNumber(str) {
+			let num = parseInt(str);
+			if (isNaN(num) || !isFinite(num)) {
 				num = 0;
 			}
 			return num;
