@@ -65,7 +65,7 @@ export default {
 
 .sidebar-collapse-sm {
 	@apply md:hidden z-40
-			w-12 h-12 absolute top-14
+			w-12 h-12 absolute top-24
 			rounded-r-xl focus:outline-none
 			bg-foreground-tertiary text-foreground-primary;
 }

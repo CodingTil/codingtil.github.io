@@ -1,11 +1,16 @@
 <template>
+	<textarea
+		v-if="textarea"
+		ref="input"
+		:value="stringValue"
+		@input="inputHandler($event.target.value)"
+	/>
 	<input
-		type="text"
+		v-else
 		size="5"
 		ref="input"
 		:value="stringValue"
 		@input="inputHandler($event.target.value)"
-		@enter="inputHandler($event.target.value)"
 	/>
 </template>
 
@@ -24,6 +29,10 @@ export default {
 		filter: {
 			type: Function,
 			default: (x) => x,
+		},
+		textarea: {
+			type: Boolean,
+			default: false,
 		},
 	},
 	data() {

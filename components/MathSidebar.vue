@@ -4,12 +4,18 @@ en:
     title: "NUMBERS"
     baseconversion: "Base Conversion"
     primes: "Primes"
+  linear_algebra:
+    title: "LINEAR ALGEBRA"
+    matrix: "Matrix"
 
 de:
   numbers:
     title: "ZAHLEN"
     baseconversion: "Basenumrechnung"
     primes: "Primzahlen"
+  linear_algebra:
+    title: "LINEARE ALGEBRA"
+    matrix: "Matrix"
 </i18n>
 
 <template>
@@ -22,6 +28,12 @@ de:
 			<sidebar-list-item
 				:title="$t('numbers.primes')"
 				:link="localePath('/math/numbers/primes')"
+			/>
+		</sidebar-item>
+		<sidebar-item :title="$t('linear_algebra.title')">
+			<sidebar-list-item
+				:title="$t('linear_algebra.matrix')"
+				:link="localePath('/math/linear_algebra/matrix')"
 			/>
 		</sidebar-item>
 	</sidebar>

@@ -25,8 +25,13 @@ export default {};
 	@apply font-semibold text-2xl mb-4;
 }
 
-.content input {
-	@apply bg-background-secondary text-foreground-primary rounded border-background-tertiary border-2 shadow;
+.content input,
+.content textarea {
+	@apply bg-background-secondary text-foreground-primary rounded border-background-tertiary border-2 box-border shadow;
+}
+
+.content textarea {
+	@apply max-h-96;
 }
 
 .content select {
