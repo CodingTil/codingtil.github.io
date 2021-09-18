@@ -27,7 +27,7 @@ export default {};
 
 .content input,
 .content textarea {
-	@apply bg-background-secondary text-foreground-primary rounded border-background-tertiary border-2 box-border shadow;
+	@apply bg-background-secondary text-foreground-primary rounded border-background-tertiary border-2 box-border shadow p-2;
 }
 
 .content textarea {

@@ -1,5 +1,6 @@
 <i18n lang="yaml">
 en:
+  title: "Math"
   numbers:
     title: "NUMBERS"
     baseconversion: "Base Conversion"
@@ -9,6 +10,7 @@ en:
     matrix: "Matrix"
 
 de:
+  title: "Mathe"
   numbers:
     title: "ZAHLEN"
     baseconversion: "Basenumrechnung"
@@ -19,7 +21,7 @@ de:
 </i18n>
 
 <template>
-	<sidebar title="Math">
+	<sidebar :title="$t('title')">
 		<sidebar-item :title="$t('numbers.title')">
 			<sidebar-list-item
 				:title="$t('numbers.baseconversion')"
@@ -30,12 +32,12 @@ de:
 				:link="localePath('/math/numbers/primes')"
 			/>
 		</sidebar-item>
-		<sidebar-item :title="$t('linear_algebra.title')">
+		<!-- <sidebar-item :title="$t('linear_algebra.title')">
 			<sidebar-list-item
 				:title="$t('linear_algebra.matrix')"
 				:link="localePath('/math/linear_algebra/matrix')"
 			/>
-		</sidebar-item>
+		</sidebar-item> -->
 	</sidebar>
 </template>
 

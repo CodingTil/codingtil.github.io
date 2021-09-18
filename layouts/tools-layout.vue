@@ -3,7 +3,7 @@
 		<div class="flex flex-col min-h-screen">
 			<navbar />
 			<div class="content-container">
-				<math-sidebar />
+				<tools-sidebar />
 				<content-layout>
 					<nuxt />
 				</content-layout>
@@ -15,6 +15,6 @@
 
 <style>
 .content-container {
-	@apply container mx-auto max-w-7xl flex -mb-3;
+	@apply container mx-auto max-w-7xl flex;
 }
 </style>

@@ -69,7 +69,7 @@ location: Aachen, Deutschland
 	<div class="min-w-full cell">
 		<ul>
 			<li>Einführung in die BWL</li>
-			<li>Quantitative Methoden<sup>**</sup></li>
+			<li>Quantitative Methoden</li>
 			<li>Entscheidungslehre<sup>**</sup></li>
 			<li>Rechnungswesen<sup>**</sup></li>
 		</ul>

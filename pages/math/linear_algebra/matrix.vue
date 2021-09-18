@@ -2,10 +2,12 @@
 en:
   title: "Linear Algebra"
   determinant: "Determinant"
+  rank: "Rank"
 
 de:
   title: "Lineare Algebra"
   determinant: "Determinant"
+  rank: "Rang"
 </i18n>
 
 <template>
@@ -15,7 +17,7 @@ de:
 		<!-- Matrix -->
 		<div class="my-6">
 			<div class="flex flew-row flex-wrap space-x-6 justify-between">
-				<matrix-input />
+				<matrix-input v-model="array" />
 				<div class="flex-grow">
 					<section class="mb-6">
 						<h2>{{ $t("determinant") }}</h2>
@@ -27,8 +29,13 @@ de:
 					</section>
 					<hr />
 					<section class="mt-6">
-						<h2>{{ $t("determinant") }}</h2>
-						<input disabled value="" placerholder="det" size="5" />
+						<h2>{{ $t("rank") }}</h2>
+						<span>Determinant</span>
+						<input
+							disabled
+							value="det A = a * b - c * d = 19"
+							placerholder="det"
+						/>
 					</section>
 				</div>
 			</div>
@@ -55,6 +62,11 @@ export default {
 				...i18nHead.meta,
 			],
 			link: [...i18nHead.link],
+		};
+	},
+	data() {
+		return {
+			matrix: [],
 		};
 	},
 };

@@ -65,7 +65,7 @@ de:
 		</nuxt-link>
 
 		<!-- Card -->
-		<nuxt-link
+		<!-- <nuxt-link
 			:to="localePath('/')"
 			class="
 				card
@@ -92,10 +92,10 @@ de:
 					{{ $t("indev") }}
 				</span>
 			</div>
-		</nuxt-link>
+		</nuxt-link> -->
 
 		<!-- Card -->
-		<nuxt-link
+		<!-- <nuxt-link
 			:to="localePath('/')"
 			class="
 				card
@@ -122,17 +122,17 @@ de:
 					{{ $t("indev") }}
 				</span>
 			</div>
-		</nuxt-link>
+		</nuxt-link> -->
 
 		<!-- Card -->
 		<nuxt-link
-			:to="localePath('/')"
+			:to="localePath('/tools/images/scaling')"
 			class="
 				card
 				from-pink-400
 				hover:from-pink-500
-				to-purple-500
-				hover:to-purple-600
+				to-red-500
+				hover:to-red-600
 			"
 		>
 			<div class="card-icon">
@@ -161,8 +161,8 @@ de:
 				card
 				from-blue-500
 				hover:from-blue-600
-				to-pink-600
-				hover:to-pink-700
+				to-purple-600
+				hover:to-purple-700
 			"
 		>
 			<div class="card-icon">
@@ -232,11 +232,11 @@ export default {
 
 <style scoped>
 .card-container {
-	@apply flex flex-wrap my-4 p-4 xl:p-0 gap-x-12 gap-y-12 container mx-auto max-w-7xl;
+	@apply flex flex-row flex-wrap justify-between p-4 xl:p-0 gap-x-12 gap-y-12 container my-8 mx-auto max-w-7xl;
 }
 
 .card {
-	@apply flex flex-1 flex-col p-8 bg-gradient-to-br rounded
+	@apply flex-1 flex flex-col p-8 bg-gradient-to-br rounded-lg min-w-max
 			cursor-pointer
 			shadow-lg hover:shadow-2xl;
 }
@@ -254,7 +254,7 @@ export default {
 }
 
 .card-title {
-	@apply flex justify-center content-center text-background-primary text-2xl md:text-4xl font-bold uppercase mx-4 my-2;
+	@apply flex justify-center content-center text-background-primary text-center text-2xl md:text-4xl font-bold uppercase mx-4 my-2;
 }
 
 .card-subtitle {
