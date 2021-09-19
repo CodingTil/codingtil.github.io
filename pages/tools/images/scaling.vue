@@ -6,6 +6,7 @@ en:
     nearestneighbor: "Nearest-neigbor Interpolation"
     bilinear: "Bilinear Interpolation"
     bicubic: "Bicubic Interpolation"
+  firefox: "Color Shift Problem on Firefox!"
 
 de:
   title: "Bildskalierung"
@@ -14,6 +15,7 @@ de:
     nearestneighbor: "Nächste-Nachbarn-Interpolation"
     bilinear: "Bilineare Interpolation"
     bicubic: "Bikubische Interpolation"
+  firefox: "Farbverschiebungsproblem bei Firefox!"
 </i18n>
 
 <template>
@@ -42,6 +44,7 @@ de:
 					{{ $t("upload") }}
 				</label>
 			</div>
+
 			<div v-show="image && image.src">
 				<label>
 					<input
@@ -53,7 +56,16 @@ de:
 					<canvas ref="canvas" class="cursor-pointer" />
 				</label>
 
-				<div class="my-8 flex flex-row flex-wrap justify-around">
+				<hr class="mt-4" />
+
+				<div
+					class="
+						my-8
+						flex flex-row flex-wrap
+						justify-around
+						gap-x-4 gap-y-4
+					"
+				>
 					<select v-model="selectedScalingMethod">
 						<option
 							v-for="(value, name) in this.scalingMethods"
@@ -68,15 +80,43 @@ de:
 						<number-input v-model="width" placeholder="width" />
 						<number-input v-model="height" placeholder="height" />
 					</div>
+
+					<button
+						class="
+							text-4xl text-rainbow-1
+							bg-background-primary
+							focus:outline-none
+							hover:text-rainbow-2
+						"
+						@click="paintCurrent"
+					>
+						<fa :icon="faChevronCircleRight" />
+					</button>
+				</div>
+				<div
+					class="
+						mb-6
+						flex
+						justify-center
+						font-bold
+						text-2xl text-error
+					"
+				>
+					<span>{{ $t("firefox") }}</span>
 				</div>
 
-				<canvas ref="result" class="cursor-pointer" />
+				<hr class="mb-4" />
+
+				<a ref="download" download="image.png"
+					><canvas ref="result" class="cursor-pointer" />
+				</a>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 export default {
 	layout: "tools-layout",
 	head() {
@@ -97,9 +137,15 @@ export default {
 			link: [...i18nHead.link],
 		};
 	},
+	computed: {
+		faChevronCircleRight() {
+			return faChevronCircleRight;
+		},
+	},
 	data() {
 		return {
 			image: null,
+			result: null,
 			scalingMethods: {
 				nearestneighbor: this.nearest_neighbor,
 				bilinear: this.bilinear,
@@ -108,31 +154,20 @@ export default {
 			selectedScalingMethod: "nearestneighbor",
 			width: 0,
 			height: 0,
+			hasResizeEvent: false,
+			working: false,
 		};
 	},
-	// REMOVE THIS!
-	watch: {
-		selectedScalingMethod: {
-			handler(val) {
-				this.paintCurrent();
-			},
-		},
-		width: {
-			handler(val, oldval) {
-				if (oldval != 0) this.paintCurrent();
-			},
-		},
-		height: {
-			handler(val, oldval) {
-				if (oldval != 0) this.paintCurrent();
-			},
-		},
-	},
 	methods: {
-		paintImage(ctx, image) {
-			ctx.canvas.width = this.$refs.outterdiv.clientWidth;
-			ctx.canvas.height = (image.height / image.width) * ctx.canvas.width;
-			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		repaint() {
+			this.paintImage(this.$refs.canvas, this.image);
+			this.paintImage(this.$refs.result, this.result);
+		},
+		paintImage(canvas, image) {
+			canvas.width = this.$refs.outterdiv.clientWidth;
+			canvas.height = (image.height / image.width) * canvas.width;
+			let ctx = canvas.getContext("2d");
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			ctx.drawImage(
 				image,
 				0,
@@ -141,8 +176,8 @@ export default {
 				image.height,
 				0,
 				0,
-				ctx.canvas.width,
-				ctx.canvas.height
+				canvas.width,
+				canvas.height
 			);
 		},
 		paintSelected(e) {
@@ -150,12 +185,20 @@ export default {
 			FR.addEventListener("load", (evt) => {
 				this.image = new Image();
 				this.image.addEventListener("load", () => {
+					this.selectedScalingMethod = "nearestneighbor";
 					this.width = this.image.width;
 					this.height = this.image.height;
-					this.paintImage(
-						this.$refs.canvas.getContext("2d"),
-						this.image
-					);
+					if (!this.hasResizeEvent) {
+						window.addEventListener(
+							"resize",
+							() => {
+								this.repaint();
+							},
+							true
+						);
+						this.hasResizeEvent = true;
+					}
+					this.paintImage(this.$refs.canvas, this.image);
 					this.paintCurrent();
 				});
 				this.image.src = evt.target.result;
@@ -163,55 +206,249 @@ export default {
 			FR.readAsDataURL(e.target.files[0]);
 		},
 		paintCurrent() {
-			this.nearest_neighbor();
+			this.result = this.scalingMethods[this.selectedScalingMethod]();
+			this.$refs.download.href = this.result.src;
 		},
 		nearest_neighbor() {
+			// Preperation
 			let canvas = document.createElement("canvas");
 			let ctx = canvas.getContext("2d");
 
-			canvas.width = this.image.naturalWidth;
-			canvas.height = this.image.naturalHeight;
+			canvas.width = this.image.width;
+			canvas.height = this.image.height;
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			ctx.drawImage(this.image, 0, 0);
-			// let input = ctx.getImageData(
-			// 	0,
-			// 	0,
-			// 	this.image.width,
-			// 	this.image.height
-			// );
+			let input = ctx.getImageData(
+				0,
+				0,
+				this.image.width,
+				this.image.height
+			);
 
+			let inputData = input.data;
+			let resultData = new Uint8ClampedArray(
+				this.width * this.height * 4
+			);
+
+			//Actuall Modification
+			let x_ratio = this.image.width / this.width;
+			let y_ratio = this.image.height / this.height;
+			let pixel;
+			let px, py;
+			let old_pixel;
+			for (let y = 0; y < this.height; y++) {
+				for (let x = 0; x < this.width; x++) {
+					pixel = (x + y * this.width) * 4;
+					px = Math.min(Math.round(x * x_ratio), this.image.width);
+					py = Math.min(Math.round(y * y_ratio), this.image.height);
+					old_pixel = (px + py * this.image.width) * 4;
+					resultData[pixel] = inputData[old_pixel];
+					resultData[pixel + 1] = inputData[old_pixel + 1];
+					resultData[pixel + 2] = inputData[old_pixel + 2];
+					resultData[pixel + 3] = inputData[old_pixel + 3];
+				}
+			}
+
+			// Return
+			let result = new ImageData(resultData, this.width, this.height);
+
+			canvas.width = this.width;
+			canvas.height = this.height;
+			ctx.putImageData(result, 0, 0);
 			let img = new Image();
-			// img.setAttribute("crossOrigin", "anonymous");
+			img.crossOrigin = "anonymous";
 			img.addEventListener("load", () => {
-				this.paintImage(this.$refs.result.getContext("2d"), img);
+				this.paintImage(this.$refs.result, img);
 			});
-			setTimeout(() => {
-				img.src = this.$refs.canvas.toDataURL();
-			}, 2000);
+			img.src = canvas.toDataURL();
 
-			// canvas.width = this.width;
-			// canvas.height = this.height;
-			// let result = ctx.createImageData(this.width, this.height);
-
-			// let inputData = input.data;
-			// let resultData = result.data;
-
-			// // for (let j = 0; j < this.height; j++) {
-			// // 	for (let i = 0; i < this.width; i++) {
-			// // 		let x = (i + j * this.width) * 4;
-			// // 		resultData[x] = inputData[x];
-			// // 	}
-			// // }
-
-			// resultData = inputData;
-
-			// ctx.putImageData(result, 0, 0);
-
-			// // let img = new Image();
-			// // img.src = canvas.toDataURL();
+			return img;
 		},
-		bilinear() {},
-		bicubic() {},
+		bilinear() {
+			// Preperation
+			let canvas = document.createElement("canvas");
+			let ctx = canvas.getContext("2d");
+
+			canvas.width = this.image.width;
+			canvas.height = this.image.height;
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.drawImage(this.image, 0, 0);
+			let input = ctx.getImageData(
+				0,
+				0,
+				this.image.width,
+				this.image.height
+			);
+
+			let inputData = input.data;
+			let resultData = new Uint8ClampedArray(
+				this.width * this.height * 4
+			);
+
+			//Actuall Modification
+			let x_ratio = this.image.width / this.width;
+			let y_ratio = this.image.height / this.height;
+			let pixel;
+			let x_diff, y_diff, px, py, px2, py2;
+			for (let y = 0; y < this.height; y++) {
+				for (let x = 0; x < this.width; x++) {
+					pixel = (x + y * this.width) * 4;
+					px = Math.min(x * x_ratio, this.image.width);
+					py = Math.min(y * y_ratio, this.image.height);
+					x_diff = px % 1;
+					y_diff = py % 1;
+					px = Math.floor(px);
+					py = Math.floor(py);
+					px2 = Math.min(px + 1, this.image.width);
+					py2 = Math.min(py + 1, this.image.height);
+					for (let i = 0; i < 4; i++) {
+						resultData[pixel + i] =
+							inputData[(px + py * this.image.width) * 4 + i] *
+								(1 - x_diff) *
+								(1 - y_diff) +
+							inputData[(px2 + py * this.image.width) * 4 + i] *
+								x_diff *
+								(1 - y_diff) +
+							inputData[(px + py2 * this.image.width) * 4 + i] *
+								(1 - x_diff) *
+								y_diff +
+							inputData[(px2 + py2 * this.image.width) * 4 + i] *
+								x_diff *
+								y_diff;
+					}
+				}
+			}
+
+			// Return
+			let result = new ImageData(resultData, this.width, this.height);
+
+			canvas.width = this.width;
+			canvas.height = this.height;
+			ctx.putImageData(result, 0, 0);
+			let img = new Image();
+			img.crossOrigin = "anonymous";
+			img.addEventListener("load", () => {
+				this.paintImage(this.$refs.result, img);
+			});
+			img.src = canvas.toDataURL();
+
+			return img;
+		},
+		bicubic() {
+			// Preperation
+			let canvas = document.createElement("canvas");
+			let ctx = canvas.getContext("2d");
+
+			canvas.width = this.image.width;
+			canvas.height = this.image.height;
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.drawImage(this.image, 0, 0);
+			let input = ctx.getImageData(
+				0,
+				0,
+				this.image.width,
+				this.image.height
+			);
+
+			let inputData = input.data;
+			let resultData = new Uint8ClampedArray(
+				this.width * this.height * 4
+			);
+
+			//Actuall Modification
+			function cubicInterpolator(y0, y1, y2, y3, mu) {
+				let a0, a1, a2, a3, mu2;
+
+				mu2 = mu * mu;
+				a0 = y3 - y2 - y0 + y1;
+				a1 = y0 - y1 - a0;
+				a2 = y2 - y0;
+				a3 = y1;
+
+				return a0 * mu * mu2 + a1 * mu2 + a2 * mu + a3;
+			}
+
+			let x_ratio = this.image.width / this.width;
+			let y_ratio = this.image.height / this.height;
+			let pixel;
+			let a = Array.from({ length: 4 }, () => 0);
+			let x_diff, y_diff, px, py;
+			let postitions = Array.from({ length: 8 }, () => 0);
+			for (let y = 0; y < this.height; y++) {
+				for (let x = 0; x < this.width; x++) {
+					pixel = (x + y * this.width) * 4;
+					px = x * x_ratio;
+					py = y * y_ratio;
+					x_diff = px % 1;
+					y_diff = py % 1;
+					px = Math.floor(px);
+					py = Math.floor(py);
+
+					postitions[0] = Math.max(px - 1, 0);
+					postitions[1] = px;
+					postitions[2] = Math.min(px + 1, this.image.width);
+					postitions[3] = Math.min(px + 2, this.image.width);
+					postitions[4] = Math.max(py - 1, 0);
+					postitions[5] = py;
+					postitions[6] = Math.min(py + 1, this.image.height);
+					postitions[7] = Math.min(py + 2, this.image.height);
+
+					for (let i = 0; i < 4; i++) {
+						for (let j = 0; j < 4; j++) {
+							a[j] = cubicInterpolator(
+								inputData[
+									(postitions[0] +
+										postitions[4 + j] * this.image.width) *
+										4 +
+										i
+								],
+								inputData[
+									(postitions[1] +
+										postitions[4 + j] * this.image.width) *
+										4 +
+										i
+								],
+								inputData[
+									(postitions[2] +
+										postitions[4 + j] * this.image.width) *
+										4 +
+										i
+								],
+								inputData[
+									(postitions[3] +
+										postitions[4 + j] * this.image.width) *
+										4 +
+										i
+								],
+								x_diff
+							);
+						}
+						resultData[pixel + i] = cubicInterpolator(
+							a[0],
+							a[1],
+							a[2],
+							a[3],
+							y_diff
+						);
+					}
+				}
+			}
+
+			// Return
+			let result = new ImageData(resultData, this.width, this.height);
+
+			canvas.width = this.width;
+			canvas.height = this.height;
+			ctx.putImageData(result, 0, 0);
+			let img = new Image();
+			img.crossOrigin = "anonymous";
+			img.addEventListener("load", () => {
+				this.paintImage(this.$refs.result, img);
+			});
+			img.src = canvas.toDataURL();
+
+			return img;
+		},
 	},
 };
 </script>
