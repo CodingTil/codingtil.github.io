@@ -147,10 +147,6 @@ de:
 			</div>
 			<div class="card-subtitle">
 				<span>{{ $t("tools.description") }}</span>
-				<span class="italic">
-					<br />
-					{{ $t("indev") }}
-				</span>
 			</div>
 		</nuxt-link>
 
