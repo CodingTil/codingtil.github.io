@@ -232,7 +232,7 @@ export default {
 }
 
 .card {
-	@apply flex-1 flex flex-col p-8 bg-gradient-to-br rounded-lg min-w-max
+	@apply flex-1 flex flex-col p-8 bg-gradient-to-br rounded-lg
 			cursor-pointer
 			shadow-lg hover:shadow-2xl;
 }
