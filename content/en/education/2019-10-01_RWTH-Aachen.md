@@ -45,8 +45,8 @@ location: Aachen, Germany
 	<div class="cell">
 		<h4>Electives</h4>
 		<ul>
-			<li>Satisfiability Checking</li>
-			<li>Introduction to Aritificial Intelligence</li>
+			<li>Satisfiability Checking<sup>**</sup></li>
+			<li>Introduction to Aritificial Intelligence<sup>**</sup></li>
 			<li class="italic text-foreground-tertiary">unknown</li>
 			<li class="italic text-foreground-tertiary">unknown</li>
 		</ul>

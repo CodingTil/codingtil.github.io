@@ -45,8 +45,8 @@ location: Aachen, Deutschland
 	<div class="cell">
 		<h4>Wahlplicht</h4>
 		<ul>
-			<li>Erfüllbarkeitstheorie</li>
-			<li>Einführung in die künstliche Intelligenz</li>
+			<li>Erfüllbarkeitstheorie<sup>**</sup></li>
+			<li>Einführung in die künstliche Intelligenz<sup>**</sup></li>
 			<li class="italic text-foreground-tertiary">unbekannt</li>
 			<li class="italic text-foreground-tertiary">unbekannt</li>
 		</ul>
