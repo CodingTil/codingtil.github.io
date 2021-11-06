@@ -61,4 +61,9 @@ export default {
 .nuxt-content .cell {
 	@apply float-left mb-4 -mt-8 mx-0 min-w-full md:min-w-0 md:w-1/2;
 }
+
+/* used for "last cell" - workaround */
+.nuxt-content .cell-non-md {
+	@apply float-left mb-4 -mt-8 mx-0 min-w-full;
+}
 </style>

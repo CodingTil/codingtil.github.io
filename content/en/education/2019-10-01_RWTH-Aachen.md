@@ -45,8 +45,8 @@ location: Aachen, Germany
 	<div class="cell">
 		<h4>Electives</h4>
 		<ul>
-			<li class="italic text-foreground-tertiary">unknown</li>
-			<li class="italic text-foreground-tertiary">unknown</li>
+			<li>Satisfiability Checking</li>
+			<li>Introduction to Aritificial Intelligence</li>
 			<li class="italic text-foreground-tertiary">unknown</li>
 			<li class="italic text-foreground-tertiary">unknown</li>
 		</ul>
@@ -66,12 +66,22 @@ location: Aachen, Germany
 <div class="w-full min-w-full">
 	<h3 class="min-w-full">Applied Subject: Business Administration</h3>
 	<hr>
-	<div class="min-w-full cell">
+	<div class="cell-non-md">
 		<ul>
 			<li>Introduction to Business Administration</li>
 			<li>Operations Research</li>
 			<li>Decision Science<sup>**</sup></li>
 			<li>Accounting<sup>**</sup></li>
+		</ul>
+	</div>
+</div>
+
+<div class="w-full min-w-full">
+	<h3 class="min-w-full">Other</h3>
+	<hr>
+	<div class="cell-non-md">
+		<ul>
+			<li>Global Change - Google Earth Engine</li>
 		</ul>
 	</div>
 </div>

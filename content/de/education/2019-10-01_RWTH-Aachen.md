@@ -45,8 +45,8 @@ location: Aachen, Deutschland
 	<div class="cell">
 		<h4>Wahlplicht</h4>
 		<ul>
-			<li class="italic text-foreground-tertiary">unbekannt</li>
-			<li class="italic text-foreground-tertiary">unbekannt</li>
+			<li>Erfüllbarkeitstheorie</li>
+			<li>Einführung in die künstliche Intelligenz</li>
 			<li class="italic text-foreground-tertiary">unbekannt</li>
 			<li class="italic text-foreground-tertiary">unbekannt</li>
 		</ul>
@@ -66,12 +66,22 @@ location: Aachen, Deutschland
 <div class="w-full min-w-full">
 	<h3 class="min-w-full">Anwendungsfach: BWL</h3>
 	<hr>
-	<div class="min-w-full cell">
+	<div class="cell-non-md">
 		<ul>
 			<li>Einführung in die BWL</li>
 			<li>Quantitative Methoden</li>
 			<li>Entscheidungslehre<sup>**</sup></li>
 			<li>Rechnungswesen<sup>**</sup></li>
+		</ul>
+	</div>
+</div>
+
+<div class="w-full min-w-full">
+	<h3 class="min-w-full">Other</h3>
+	<hr>
+	<div class="cell-non-md">
+		<ul>
+			<li>Klima Wandel - Google Earth Engine</li>
 		</ul>
 	</div>
 </div>
