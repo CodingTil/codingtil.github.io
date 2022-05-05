@@ -1,6 +1,7 @@
 const path = require('path')
 
 export default {
+	target: 'static',
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		link: [
@@ -63,7 +64,7 @@ export default {
 
 	server: {
 		host: '0.0.0.0',
-		port: 80
+		port: 3000
 	},
 
 	security: {

@@ -45,18 +45,18 @@ location: Aachen, Deutschland
 	<div class="cell">
 		<h4>Wahlplicht</h4>
 		<ul>
-			<li>Erfüllbarkeitstheorie<sup>**</sup></li>
-			<li>Einführung in die künstliche Intelligenz<sup>**</sup></li>
-			<li class="italic text-foreground-tertiary">unbekannt</li>
-			<li class="italic text-foreground-tertiary">unbekannt</li>
+			<li>Einführung in High-Performance Computing</li>
+			<li>Einführung in die künstliche Intelligenz</li>
+			<li>Algorithmic Foundations of Datascience<sup>**</sup></li>
+			<li>Business Process Intelligence<sup>**</sup></li>
 		</ul>
 	</div>
 	<div class="cell">
 		<h4>Sonstige Studienleistungen</h4>
 		<ul>
 			<li><document-download path="/Proseminar.pdf">Proseminar</document-download></li>
-			<li>Seminar<sup>**</sup></li>
-			<li>Software-Projektpraktikum<sup>**</sup></li>
+			<li><document-download path="/Seminar.pdf">Seminar</document-download></li>
+			<li>Software-Projektpraktikum</li>
 			<li>Spanisch Sprachkurs</li>
 			<li>Bachelorarbeit<sup>**</sup></li>
 		</ul>
@@ -70,8 +70,8 @@ location: Aachen, Deutschland
 		<ul>
 			<li>Einführung in die BWL</li>
 			<li>Quantitative Methoden</li>
-			<li>Entscheidungslehre<sup>**</sup></li>
-			<li>Rechnungswesen<sup>**</sup></li>
+			<li>Entscheidungslehre</li>
+			<li>Rechnungswesen</li>
 		</ul>
 	</div>
 </div>

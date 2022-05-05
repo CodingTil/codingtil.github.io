@@ -45,18 +45,18 @@ location: Aachen, Germany
 	<div class="cell">
 		<h4>Electives</h4>
 		<ul>
-			<li>Satisfiability Checking<sup>**</sup></li>
-			<li>Introduction to Aritificial Intelligence<sup>**</sup></li>
-			<li class="italic text-foreground-tertiary">unknown</li>
-			<li class="italic text-foreground-tertiary">unknown</li>
+			<li>Introduction to High-Performance Computing</li>
+			<li>Introduction to Aritificial Intelligence</li>
+			<li>Algorithmic Foundations of Datascience<sup>**</sup></li>
+			<li>Business Process Intelligence<sup>**</sup></li>
 		</ul>
 	</div>
 	<div class="cell">
 		<h4>Other Assessments</h4>
 		<ul>
 			<li><document-download path="/Proseminar.pdf">Basic Seminar</document-download></li>
-			<li>Seminar<sup>**</sup></li>
-			<li>Software Project Internship<sup>**</sup></li>
+			<li><document-download path="/Seminar.pdf">Seminar</document-download></li>
+			<li>Software Project Internship</li>
 			<li>Spanish language course</li>
 			<li>Bachelor's Thesis<sup>**</sup></li>
 		</ul>
@@ -70,8 +70,8 @@ location: Aachen, Germany
 		<ul>
 			<li>Introduction to Business Administration</li>
 			<li>Operations Research</li>
-			<li>Decision Science<sup>**</sup></li>
-			<li>Accounting<sup>**</sup></li>
+			<li>Decision Science</li>
+			<li>Accounting</li>
 		</ul>
 	</div>
 </div>
