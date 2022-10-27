@@ -20,7 +20,7 @@ de:
 				{{ base }}
 			</option>
 		</select>
-		<generic-input
+		<GenericInput
 			:placeholder="$t('enter')"
 			:toObjectType="toBase10"
 			:toStringType="toBase"

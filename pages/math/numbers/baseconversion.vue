@@ -18,12 +18,12 @@ de:
 		<section class="my-6">
 			<h2>{{ $t("baseconversion") }}</h2>
 			<div class="flex flex-col space-y-4">
-				<base-number-input
+				<BaseNumberInput
 					v-model="baseconversionnumber"
 					class="left"
 					preselectedBase="2"
 				/>
-				<base-number-input
+				<BaseNumberInput
 					v-model="baseconversionnumber"
 					class="left"
 					preselectedBase="10"

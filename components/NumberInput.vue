@@ -7,7 +7,7 @@ de:
 </i18n>
 
 <template>
-	<generic-input
+	<GenericInput
 		:placeholder="$t('enter')"
 		:toObjectType="toNumber"
 		:filter="bound"

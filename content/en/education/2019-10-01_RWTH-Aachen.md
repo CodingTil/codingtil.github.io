@@ -1,11 +1,11 @@
 ---
 title: RWTH Aachen University
-education: Sc.B. in Computer Science
-date_range: October 2019 - September 2022<sup>*</sup>
+education: B.Sc. in Computer Science
+date_range: October 2019 - September 2022
 location: Aachen, Germany
 ---
 <div class="w-full min-w-full">
-	<h3 class="min-w-full">Undergratuate Coursework</h3>
+	<h3 class="min-w-full">Undergraduate Coursework</h3>
 	<hr>
 	<div class="cell">
 		<h4>Practical Computer Science</h4>
@@ -47,8 +47,8 @@ location: Aachen, Germany
 		<ul>
 			<li>Introduction to High-Performance Computing</li>
 			<li>Introduction to Aritificial Intelligence</li>
-			<li>Algorithmic Foundations of Datascience<sup>**</sup></li>
-			<li>Business Process Intelligence<sup>**</sup></li>
+			<li>Algorithmic Foundations of Datascience</li>
+			<li>Business Process Intelligence</li>
 		</ul>
 	</div>
 	<div class="cell">
@@ -58,7 +58,7 @@ location: Aachen, Germany
 			<li><document-download path="/Seminar.pdf">Seminar</document-download></li>
 			<li>Software Project Internship</li>
 			<li>Spanish language course</li>
-			<li>Bachelor's Thesis<sup>**</sup></li>
+			<li>Bachelor's Thesis</li>
 		</ul>
 	</div>
 </div>
@@ -84,13 +84,4 @@ location: Aachen, Germany
 			<li>Global Change - Google Earth Engine</li>
 		</ul>
 	</div>
-</div>
-
-<div class="w-full min-w-full flex justify-start">
-	<sup class="sup mr-2">
-	* Expected graduation date
-	</sup>
-	<sup class="sup mr-2">
-	** In progress
-	</sup>
 </div>

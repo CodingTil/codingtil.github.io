@@ -6,7 +6,6 @@ en:
     nearestneighbor: "Nearest-neigbor Interpolation"
     bilinear: "Bilinear Interpolation"
     bicubic: "Bicubic Interpolation"
-  firefox: "Color Shift Problem on Firefox!"
 
 de:
   title: "Bildskalierung"
@@ -15,7 +14,6 @@ de:
     nearestneighbor: "Nächste-Nachbarn-Interpolation"
     bilinear: "Bilineare Interpolation"
     bicubic: "Bikubische Interpolation"
-  firefox: "Farbverschiebungsproblem bei Firefox!"
 </i18n>
 
 <template>
@@ -77,8 +75,8 @@ de:
 					</select>
 
 					<div class="flex flex-row flex-nowrap">
-						<number-input v-model="width" placeholder="width" />
-						<number-input v-model="height" placeholder="height" />
+						<NumberInput v-model="width" placeholder="width" />
+						<NumberInput v-model="height" placeholder="height" />
 					</div>
 
 					<button
@@ -92,17 +90,6 @@ de:
 					>
 						<fa :icon="faChevronCircleRight" />
 					</button>
-				</div>
-				<div
-					class="
-						mb-6
-						flex
-						justify-center
-						font-bold
-						text-2xl text-error
-					"
-				>
-					<span>{{ $t("firefox") }}</span>
 				</div>
 
 				<hr class="mb-4" />

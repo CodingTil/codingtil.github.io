@@ -1,7 +1,7 @@
 ---
 title: RWTH Aachen
-education: Sc.B. in Informatik
-date_range: Oktober 2019 - September 2022<sup>*</sup>
+education: B.Sc. in Informatik
+date_range: Oktober 2019 - September 2022
 location: Aachen, Deutschland
 ---
 <div class="w-full min-w-full">
@@ -47,8 +47,8 @@ location: Aachen, Deutschland
 		<ul>
 			<li>Einführung in High-Performance Computing</li>
 			<li>Einführung in die künstliche Intelligenz</li>
-			<li>Algorithmic Foundations of Datascience<sup>**</sup></li>
-			<li>Business Process Intelligence<sup>**</sup></li>
+			<li>Algorithmic Foundations of Datascience</li>
+			<li>Business Process Intelligence</li>
 		</ul>
 	</div>
 	<div class="cell">
@@ -58,7 +58,7 @@ location: Aachen, Deutschland
 			<li><document-download path="/Seminar.pdf">Seminar</document-download></li>
 			<li>Software-Projektpraktikum</li>
 			<li>Spanisch Sprachkurs</li>
-			<li>Bachelorarbeit<sup>**</sup></li>
+			<li>Bachelorarbeit</li>
 		</ul>
 	</div>
 </div>
@@ -84,13 +84,4 @@ location: Aachen, Deutschland
 			<li>Klima Wandel - Google Earth Engine</li>
 		</ul>
 	</div>
-</div>
-
-<div class="w-full min-w-full flex justify-start">
-	<sup class="sup mr-2">
-	* Erwartetes Abschlussdatum
-	</sup>
-	<sup class="sup mr-2">
-	** Noch nicht beendet
-	</sup>
 </div>
