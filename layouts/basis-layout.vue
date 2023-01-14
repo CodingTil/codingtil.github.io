@@ -9,7 +9,7 @@
 					<Meta :id="meta.id" :property="meta.property" :content="meta.content" />
 				</template>
 			</Head>
-			<Body>
+			<Body class="my-body">
 				<slot />
 			</Body>
 		</Html>

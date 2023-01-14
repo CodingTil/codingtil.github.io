@@ -62,4 +62,10 @@ export default <Partial<Config>>{
 		'./app.{ts,js,vue}',
 		'./error.{ts,js,vue}',
 	],
+	safelist: [
+		{
+			pattern: /rainbow/,
+		},
+	],
+
 }

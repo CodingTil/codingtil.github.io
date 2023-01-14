@@ -7,16 +7,31 @@ export default defineNuxtConfig({
 		]
 	},
 
-	css: [
-		'@fortawesome/fontawesome-svg-core/styles.css'
-	],
+	build: {
+		transpile: [
+			'@fortawesome/fontawesome-svg-core',
+			'@fortawesome/pro-solid-svg-icons',
+			'@fortawesome/pro-regular-svg-icons',
+			'@fortawesome/pro-light-svg-icons',
+			'@fortawesome/free-brands-svg-icons'
+		]
+	},
 
 	modules: [
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/html-validator',
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode',
+		'@nuxt/content',
 	],
+
+	css: [
+		'@fortawesome/fontawesome-svg-core/styles.css'
+	],
+
+	content: {
+		// https://content.nuxtjs.org/api/configuration
+	},
 
 	i18n: {
 		baseUrl: 'https://tilmohr.com',
@@ -33,6 +48,7 @@ export default defineNuxtConfig({
 			},
 		],
 		strategy: 'prefix_except_default',
-		defaultLocale: 'en'
+		defaultLocale: 'en',
+		vueI18nLoader: true
 	},
 })
