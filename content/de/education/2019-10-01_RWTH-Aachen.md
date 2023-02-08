@@ -5,7 +5,7 @@ date_range: Oktober 2019 - September 2022
 location: Aachen, Deutschland
 ---
 <div class="w-full min-w-full">
-	<h3 class="min-w-full">Grundstudium</h3>
+	<h3 class="min-w-full mt-10">Grundstudium</h3>
 	<hr>
 	<div class="cell">
 		<h4>Praktische Informatik</h4>
@@ -54,8 +54,8 @@ location: Aachen, Deutschland
 	<div class="cell">
 		<h4>Sonstige Studienleistungen</h4>
 		<ul>
-			<li><document-download path="/Proseminar.pdf">Proseminar</document-download></li>
-			<li><document-download path="/Seminar.pdf">Seminar</document-download></li>
+			<li><DocumentDownload path="/Proseminar.pdf">Proseminar</DocumentDownload></li>
+			<li><DocumentDownload path="/Seminar.pdf">Seminar</DocumentDownload></li>
 			<li>Software-Projektpraktikum</li>
 			<li>Spanisch Sprachkurs</li>
 			<li>Bachelorarbeit</li>

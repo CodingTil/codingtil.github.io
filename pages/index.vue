@@ -89,24 +89,23 @@ de:
 			</div>
 		</section>
 
-	<!--
 		<section
 			class="cv-section bg-background-tertiary text-foreground-primary"
 		>
 			<div class="section-box">
 				<div class="section-title border-foreground-secondary">
-					{{ $t("projects") }}
+					{{ t("projects") }}
 				</div>
-				<div class="flex flex-row flex-wrap justify-around p-5">
-					<project-card
-						v-for="(post, i) in projects"
-						:key="i"
-						:document="post"
-					/>
+				<div
+					class="flex flex-row flex-wrap justify-around p-5"
+				>
+					<ProjectCard
+					v-for="(path, i) in projects"
+					:key="i"
+					:path="path" />
 				</div>
 			</div>
 		</section>
-	-->
 
 		<section
 			class="cv-section bg-foreground-tertiary text-background-primary"
@@ -191,10 +190,6 @@ de:
 </template>
 
 <script setup>
-	useHead({
-		titleTemplate: title => title,
-		title: "Til Mohr",
-	})
 	const { t } = useI18n({useScope: 'local'})
 
 	// split by /, get first
@@ -219,8 +214,11 @@ de:
 		for (var i = 0; i < elems.length; i++) {
 			elems[i].className += " border-rainbow-" + ((i % 6) + 1)
 		}
-		console.log(elems.length)
-		console.log(elems[0])
+	})
+
+	useHead({
+		title: "Til Mohr",
+		titleTemplate: title => title,
 	})
 </script>
 

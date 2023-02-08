@@ -54,8 +54,8 @@ location: Aachen, Germany
 	<div class="cell">
 		<h4>Other Assessments</h4>
 		<ul>
-			<li><document-download path="/Proseminar.pdf">Basic Seminar</document-download></li>
-			<li><document-download path="/Seminar.pdf">Seminar</document-download></li>
+			<li><documentdownload path="/Proseminar.pdf">Basic Seminar</documentdownload></li>
+			<li><documentdownload path="/Seminar.pdf">Seminar</documentdownload></li>
 			<li>Software Project Internship</li>
 			<li>Spanish language course</li>
 			<li>Bachelor's Thesis</li>

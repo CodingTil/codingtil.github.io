@@ -2,7 +2,7 @@
 slug: simplechat
 image: /SimpleChat/chat.png
 title: SimpleChat
-color: bg-green-600
+color: bg-rainbow-2
 tagline: Vereinfachte full-stack Chat App
 url: https://github.com/CodingTil/SimpleChat-NuxtJS-Flask
 date_range: Februar 2021
@@ -20,5 +20,5 @@ Das Frontend wurde mit dem [Nuxt.js Framework](https://nuxtjs.org/) entwickelt. 
 Das Backend verwendet die [Flask](https://flask.palletsprojects.com/en/1.1.x/) Python-Bibliothek und speichert Nachrichten in einer [sqlite](https://sqlite.org/index.html) Datenbank.
 
 # Screenshots
-<image-simple-chat-login></image-simple-chat-login>
-<image-simple-chat-chat></image-simple-chat-chat>
+<imagesimplechatlogin></imagesimplechatlogin>
+<imagesimplechatchat></imagesimplechatchat>

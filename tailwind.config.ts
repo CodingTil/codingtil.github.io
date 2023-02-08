@@ -66,6 +66,10 @@ export default <Partial<Config>>{
 		{
 			pattern: /rainbow/,
 		},
+		{
+			pattern: /bg-rainbow/,
+			variants: ['hover', 'focus'],
+		},
 	],
 
 }

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 
 	modules: [
 		'@nuxtjs/tailwindcss',
-		'@nuxtjs/html-validator',
+		//'@nuxtjs/html-validator',
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode',
 		'@nuxt/content',
