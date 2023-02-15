@@ -216,9 +216,12 @@ de:
 		}
 	})
 
-	useHead({
+	useContentHead({
+		head: {
+			title: "Til Mohr",
+			titleTemplate: title => title,
+		},
 		title: "Til Mohr",
-		titleTemplate: title => title,
 	})
 </script>
 
