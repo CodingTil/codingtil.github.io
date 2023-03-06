@@ -218,10 +218,12 @@ de:
 
 	useContentHead({
 		head: {
-			title: "Til Mohr",
-			titleTemplate: title => title,
-		},
-		title: "Til Mohr",
+			titleTemplate: (title) => `Til Mohr`,
+			meta: [
+				{ hid: "description", name: "description", content: "Til Mohr's Curriculum Vitae"},
+				{ name: "description", content: "Til Mohr's Curriculum Vitae"}
+			]
+		}
 	})
 </script>
 
